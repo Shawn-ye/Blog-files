@@ -40,7 +40,7 @@ Note: The given binary tree has not more than 10000 nodes. The height of the tre
 
 ### C++
 层次遍历二叉树结点, 依次搜索每个节点. 由于最长路径未必通过根节点, 因此需要即时计算最长路径并保存.
-![](/images/leetcode/687_rank0.png)
+![](leetcode/687_rank0.png)
 
 ```cpp
 /**
@@ -118,7 +118,7 @@ Note: If a tree has more than one mode, you can return them in any order.
 Follow up: Could you do that without using any extra space? (Assume that the implicit stack space incurred due to recursion does not count).
 
 ### Java
-![](/images/leetcode/501_rank0.png)
+![](leetcode/501_rank0.png)
 ```java
 /**
  * Definition for a binary tree node.
@@ -187,7 +187,7 @@ For this problem, a height-balanced binary tree is defined as a binary tree in w
 
 ### Java
 比较蠢的办法，递归求子树深度，并依次对每个节点做比较。
-![](/images/leetcode/110_rank0.png)
+![](leetcode/110_rank0.png)
 ```java
 /**
  * Definition for a binary tree node.
@@ -223,11 +223,11 @@ class Solution {
 ```
 
 ##  Lowest Common Ancestor of a Binary Search Tree
-![t](/images/leetcode/235.png)
+![t](leetcode/235.png)
 
 ### Java
 题意就是寻找二叉树中高度最低的一个共同的父节点, 即从根节点开始的共同路径中的最后一个节点. 首先搜索两个节点, 路径存储在队列里, 然后找出最后一个相同节点即可.
-![t](/images/leetcode/235_rank0.png)
+![t](leetcode/235_rank0.png)
 ```java
 /**
  * Definition for a binary tree node.
@@ -274,10 +274,10 @@ class Solution {
 ---
 
 ##  Path Sum III
-![t](/images/leetcode/437.png)
+![t](leetcode/437.png)
 ### Java
 从根节点开始遍历每个点, 依次搜索可能的路径. 需要注意的是, 类似1 2 和 1 2 -1 1这样的路径是计算为两次的.
-![t](/images/leetcode/437_rank0.png)
+![t](leetcode/437_rank0.png)
 
 ```java
 /**
@@ -320,12 +320,12 @@ class Solution {
 ```
 
 ##  Subtree of Another Tree 
-![t](/images/leetcode/572.png)
+![t](leetcode/572.png)
 
 ### Java
 倒是一次性写出了个bug free的代码，就是这执行时间...叹气
 
-![t](/images/leetcode/572_rank0.png)
+![t](leetcode/572_rank0.png)
 
 ```java
 /**
@@ -392,10 +392,10 @@ class Solution {
 ```
 
 ##  Binary Tree Level Order Traversal II
-![t](/images/leetcode/107.png)
+![t](leetcode/107.png)
 
 ### Java
-![t](/images/leetcode/107_rank0.png)
+![t](leetcode/107_rank0.png)
 比较经典的一个算法。
 队列中每次会包含二叉树同一层级的全部元素，在取出这一层的全部元素时，也把下一层的全部元素放进去，依次循环，直到队列为空，循环结束。
 ```java
@@ -441,12 +441,12 @@ public class Solution {
 
 
 ##  Second Minimum Node In a Binary Tree
-![t](/images/leetcode/671.png)
+![t](leetcode/671.png)
 
 ### Java 
 
 
-![t](/images/leetcode/671_rank_0.png)
+![t](leetcode/671_rank_0.png)
 
 ```java
 /**
@@ -547,13 +547,13 @@ class Solution {
 
 
 ##  Diameter of Binary Tree
-![t](/images/leetcode/543.png)
+![t](leetcode/543.png)
 
 ### Java, 12ms @ 106 test cases
 递归遍历二叉树, 计算每个根节点左右子树中的最长路径, 并计算当前根节点的左右子树的最长路径之和, 保留最大值. 需要注意的是, 最长路径未必经过根节点, 比如下面这种情况:
 
 
-<center>![t](/images/leetcode/543_0.bmp)</center>
+<center>![t](leetcode/543_0.bmp)</center>
 
 ```java
 /**
@@ -594,7 +594,7 @@ class Solution {
 ```
 ---
 ##  Trim a Binary Search Tree
-![Img title](/images/leetcode/669.png)
+![Img title](leetcode/669.png)
 
 ### Algorithm0: 9ms, 77 test cases, Java
 *   根节点比L小, 则抛弃左枝, 修建右枝.
@@ -1013,7 +1013,7 @@ Could you do it in O(n) time and O(1) space?
 
 ### C++
 暂时先没想到o(n)时间和o(1)空间的解法, 先写个o(n)/o(n)的吧
-![](/images/leetcode/234_rank0.png)
+![](leetcode/234_rank0.png)
 
 ```cpp
 /**
@@ -1064,7 +1064,7 @@ Merge two sorted linked lists and return it as a new list. The new list should b
 
 ### Java
 经典链表题了.
-![t](/images/leetcode/21_rank0.png)
+![t](leetcode/21_rank0.png)
 ```java
 
  /**
@@ -1255,7 +1255,7 @@ For example,
 
 ### C++
 头尾同时遍历, 向中间靠拢. 遇到非字母数字的字符跳过. 
-![](/images/leetcode/125_rank0.png)
+![](leetcode/125_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -1309,7 +1309,7 @@ Count the number of prime numbers less than a non-negative number, n.
 最后, 遍历整个结果, 统计未被标记的元素的个数.
 
 
-![](/images/leetcode/204_rank0.png)
+![](leetcode/204_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -1354,7 +1354,7 @@ For example:
 这题跟26进制转换很类似, 但又不完全一样. 首先循环从A开始, 暗示A代表26进制中的0. 但是进位之后的数字也从A开始计, 这个规律按照十进制记数法表示就是0, 1, 2, ..., 9, 00, 01 这样.
 
 按照这个规律, 二位数字中会平白无故多出10个数, 00~09. 三位数字中会多出100个数, 000~099. 所以, 每一次循环都要对n减一处理, 将多出来的数字去掉.
-![](/images/leetcode/168_rank0.png)
+![](leetcode/168_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -1402,7 +1402,7 @@ Explanation: Note that the third maximum here means the third maximum distinct n
 Both numbers with value 2 are both considered as second maximum.
 
 ### C++
-![](/images/leetcode/414_rank0.png)
+![](leetcode/414_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -1434,7 +1434,7 @@ x is guaranteed to be a non-negative integer.
 
 ### C++
 这个算法代码很简洁, 但是效率太差, 执行sqrt(x)次.
-![](/images/leetcode/69_rank0.png)
+![](leetcode/69_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -1506,7 +1506,7 @@ public:
 ```
 
 ### C++
-![](/images/leetcode/532_rank0.png)
+![](leetcode/532_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -1543,7 +1543,7 @@ Output: -1
 
 ### C++
 从haystack字符串头开始遍历, 依次和needle的第一个字符比较, 如果相等再开始比较剩下的字符.
-![](/images/leetcode/28_rank0.png)
+![](leetcode/28_rank0.png)
 
 ```cpp
 class Solution {
@@ -1589,7 +1589,7 @@ Then length of the input array is in range [1, 10,000].
 The input array may contain duplicates, so ascending order here means <=.
 
 ### C++
-![](/images/leetcode/581_rank0.png)
+![](leetcode/581_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -1626,7 +1626,7 @@ If this function is called many times, how would you optimize it?
 
 ### C++
 把n最高位的数字取出来, 赋值到结果的最高位, 再依次右移. 循环结束时, 原来的最高位就变换到了最低位.
-![](/images/leetcode/190_rank0.png)
+![](leetcode/190_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -1673,7 +1673,7 @@ Explanation: The two heater was placed in the position 1 and 4. We need to use r
 ```
 
 ### C++
-![](/images/leetcode/475_rank0.png)
+![](leetcode/475_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -1715,7 +1715,7 @@ minStack.getMin();   --> Returns -2.
 *   如果第一个入栈的元素比之后的所有元素都小, 那么该元素将一直再s1和s2的栈底部, 直到其他元素都pop掉之后, 才会pop.
 *   如果后续有比首个元素小的值, 那么s2中会压入新的元素. 出栈时也是先pop掉前面的最小值.
 
-![](/images/leetcode/155_rank0.png)
+![](leetcode/155_rank0.png)
 ```cpp
 class MinStack {
 public:
@@ -1766,7 +1766,7 @@ private:
 *   尾部两个0
 
 另外, 找到种花位置后, 下一个位置可以直接跳过不判断; 对于1的位置, 也可以跳过下一个位置不判断.
-![](/images/leetcode/605_rank0.png)
+![](leetcode/605_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -1808,7 +1808,7 @@ There are many calls to sumRange function.
 
 ### C++
 这题蛮无语的, 看了半天没懂要干啥. 无非就是把累加循环求和的运算用空间换时间的策略简化了一下. 还有这种操作?
-![](/images/leetcode/303_rank0.png)
+![](leetcode/303_rank0.png)
 ```cpp
 class NumArray {
 public:
@@ -1838,7 +1838,7 @@ private:
 
 ### C++
 因为B要是A重复之后的一个子串, 首先构造str并不断重复A使得str的长度刚好达到或者超过B. 然后检查是否B是子串, 如果不是, 再重复添加一次A, 再检查一次. 如果还不是, 那就没可能了. 因为如果B是截取的A尾部和头部部分字符串拼凑的话, 重复一次A必然会搜索到B.
-![](/images/leetcode/686_rank0.png)
+![](leetcode/686_rank0.png)
 
 ```cpp
 class Solution {
@@ -1890,7 +1890,7 @@ The string will only contain lowercase characters a-z. The maximum length of the
 ### C++
 双支针, 向中间靠拢. 遇到不同的字符时则尝试跳过, 可以左侧跳过也可以右侧跳过. 当两侧跳过都满足条件时, 则需要再多判断下一个字符的情况.
 
-![](/images/leetcode/680_rank0.png)
+![](leetcode/680_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -1953,7 +1953,7 @@ Output: False
 
 ### C++
 太多乘法和开方运算了, 影响效率
-![](/images/leetcode/633_rank0.png)
+![](leetcode/633_rank0.png)
 
 ```cpp
 class Solution {
@@ -1981,7 +1981,7 @@ b = "1"
 Return "100".
 
 ### C++
-![](/images/leetcode/67_rank0.png)
+![](leetcode/67_rank0.png)
 
 ```cpp
 class Solution {
@@ -2024,7 +2024,7 @@ Explanation: 28 = 1 + 2 + 4 + 7 + 14
 Note: The input number n will not exceed 100,000,000. (1e8)
 
 ### C++
-![](/images/leetcode/507_rank0.png)
+![](leetcode/507_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -2150,7 +2150,7 @@ class Solution {
 ```
 
 ### C++
-![](/images/leetcode/438_rank0.png)
+![](leetcode/438_rank0.png)
 ```cpp
 class Solution {
 public:
@@ -2254,7 +2254,7 @@ Because the 4th row is incomplete, we return 3.
 
 至于搜索下限, 个人以为是没法严格确定的. 0.5(k+1)k <= n < 0.5(k+1)(k+2), 但是比较关键的0.5(k+1)(k+1)的位置不确定, 它可能比n大, 也可能比n小.
 
-![](/images/leetcode/441_rank0.png)
+![](leetcode/441_rank0.png)
 ```java
 class Solution {
     public int arrangeCoins(int n) {
@@ -2290,7 +2290,7 @@ Notes:
 *   You may assume that all operations are valid (for example, no pop or top operations will be called on an empty stack).
 
 ### C++
-![](/images/leetcode/225_rank0.png)
+![](leetcode/225_rank0.png)
 ```cpp
 class MyStack {
 public:
@@ -2370,7 +2370,7 @@ Notes:
 *   ``peek``: 和``pop``操作很像, 只是B栈的``pop``操作换成了B栈的``peek``操作.
 *   ``empty``: 返回A栈的``empty()``即可
 
-![](/images/leetcode/232_rank0.png)
+![](leetcode/232_rank0.png)
 ```java
 class MyQueue {
     public Stack<Integer> stackA, stackB;
@@ -2451,7 +2451,7 @@ Elements of the given array will be in the range [-10,000, 10,000].
 
 ### Java
 这个操作很像均值滤波
-![](/images/leetcode/643_rank0.png)
+![](leetcode/643_rank0.png)
 ```java
 class Solution {
     public double findMaxAverage(int[] nums, int k) {
@@ -2529,7 +2529,7 @@ Notice each digit has it's own entry in the array.
 思路：每个字符和前一个字符比较，如果相同就增加计数，否则开始压缩。如果计数值为1，则直接写入，否则根据计数值位数来写入。
 
 leetcode这时间也是醉了 这么长的代码 这么靠前的排名。。
-![t](/images/leetcode/443_rank0.png)
+![t](leetcode/443_rank0.png)
 
 ```java
 class Solution {
@@ -2633,7 +2633,7 @@ Explanation: It's the substring "abc" four times. (And the substring "abcabc" tw
 
 ### Java
 由题意可以知道重复字符串必然从第一个字符开始，因此首先从第二个字符开始搜索可能匹配的子串，然后依次检查每个子串。
-![t](/images/leetcode/459_rank0.png)
+![t](leetcode/459_rank0.png)
 
 ```java
 class Solution {
@@ -2665,7 +2665,7 @@ class Solution {
 ---
 
 ##  Valid Perfect Square
-![t](/images/leetcode/367.png)
+![t](leetcode/367.png)
 ### Java
 一开始想到的是这个解法, 1开始往上搜索, 不过太慢了, 超时了.
 ```java
@@ -2685,7 +2685,7 @@ class Solution {
 ### Java
 其实主要解决的就是一个搜索步长的问题. 针对不同的数, 步长要是动态变化的, 以提高搜索效率.
 初始搜索区间为1~num, 每次计算区间中点处乘方与目标数值的大小, 再进一步改变区间.
-![t](/images/leetcode/367_rank0.png)
+![t](leetcode/367_rank0.png)
 ```java
 class Solution {
     public boolean isPerfectSquare(int num) {
@@ -2742,12 +2742,12 @@ class Solution {
 ---
 
 ##  Maximum Subarray
-![t](/images/leetcode/53.png)
+![t](leetcode/53.png)
 
 ### Java
 O(n)的解法.从尾部开始遍历每个数字, currentMaxSum保存当前从上个数字开始的最大的和. 如果这个和大于0, 那么应该把当前的数字附加到这个序列中, 组成的新序列是从当前数字开始的最大子数组; 如果这个和小于0, 那么应该抛弃(附加一个和小于0的数组只会让和减小), 新序列的元素为当前数字.
 
-![t](/images/leetcode/53_rank0.png)
+![t](leetcode/53_rank0.png)
 ```java
 class Solution {
     public int maxSubArray(int[] nums) {
@@ -2765,12 +2765,12 @@ class Solution {
 }
 ```
 ##  Set Mismatch
-![t](/images/leetcode/645.png)
+![t](leetcode/645.png)
 
 
 ### Java
 遍历一遍找到重复的数，顺带求个和。原始正确的数组应该是1~n，由于一个数字出现了两次，丢失的数和重复的数的差值会反映在数组的和与1~n数列的和的差值中。
-![t](/images/leetcode/645_rank0.png)
+![t](leetcode/645_rank0.png)
 ```java
 class Solution {
     public int[] findErrorNums(int[] nums) {
@@ -2797,13 +2797,13 @@ class Solution {
 
 
 ##  Longest Harmonious Subsequence 
-![t](/images/leetcode/594.png)
+![t](leetcode/594.png)
 
 ### Java
 遍历一遍原始数组，统计一下各个元素出现的个数，写进hash表。由题意不难知道，最长的Harmonious Subsequence只可能有两种元素，并且它们相差1. 因此再遍历hash表，看每个元素和它的相邻元素是否都出现了，如果都出现了，那么求和，并记录最大值。
 
 
-![t](/images/leetcode/594_rank0.png)
+![t](leetcode/594_rank0.png)
 
 ```java
 class Solution {
@@ -2835,7 +2835,7 @@ class Solution {
 ```
 
 ##  Longest Continuous Increasing Subsequence
-![t](/images/leetcode/674.png)
+![t](leetcode/674.png)
 
 ### Java, 5ms @ 36 test cases
 题目的要求是连续子数组.
@@ -2867,7 +2867,7 @@ class Solution {
 
 ##  Reverse String II
 
-![t](/images/leetcode/541.png)
+![t](leetcode/541.png)
 
 ### Java, 9ms @ 60 test cases
 题意可理解为以下两点:
@@ -2916,7 +2916,7 @@ class Solution {
 ---
 
 ##  Student Attendance Record I
-![T](/images/leetcode/551.png)
+![T](leetcode/551.png)
 
 ### Java, 9ms @ 113 test cases
 ```java
@@ -2953,7 +2953,7 @@ class Solution {
 ---
 
 ##  Maximum Product of Three Numbers
-![t](/images/leetcode/628.png)
+![t](leetcode/628.png)
 
 ### Java, 32ms @ 83 test cases.
 学好英文很重要, 这里的product是乘积的意思, 不是产品. 需要找到原始数组中三个数乘积中最大的一个.
@@ -2980,7 +2980,7 @@ class Solution {
 ---
 
 ##  Minimum Index Sum of Two Lists
-![t](/images/leetcode/599.png)
+![t](leetcode/599.png)
 ### Java, 29ms @ 133 test cases
 题目不难, 需要注意的是, 当存在多个最优解, 即下标和相同时, 需要输出全部的结果.
 *   遍历表1, 生成一张字符串到下标的map
@@ -3026,7 +3026,7 @@ class Solution {
 ---
 
 ##  Number of Boomerangs
-![t](/images/leetcode/447.png)
+![t](leetcode/447.png)
 
 ### 一些思路
 这题其实是求一个平面坐标系中, 一系列散列点中的对称关系. 点集合(i, j, k)中, jk关于i对称. 根据题目的要求, (i,j,k)和(i,k,j)算不同的集合. 那么, 根据排列组合的思想, 假设我们找到了3个点abc关于d对称, 那么将有3*2=6个解. 如果找到了4个点, 有12个解, 以此类推.
@@ -3077,7 +3077,7 @@ class Solution {
 ---
 
 ##  Image Smoother
-![title](/images/leetcode/661.png)
+![title](leetcode/661.png)
 
 
 ### Java, 27ms @ 202 test cases
@@ -3197,7 +3197,7 @@ class Solution {
 ---
 ##  Count Binary Substrings
 
-![tilte](/images/leetcode/696.png)
+![tilte](leetcode/696.png)
 
 ### 931ms @ 90 test cases, Java
 从题意中提取出几个特点:
@@ -3243,7 +3243,7 @@ class Solution {
 ---
 ##  Degree of an Array
 
-![title](/images/leetcode/697.png)
+![title](leetcode/697.png)
 
 ### 212ms @ 89 test cases, js
 其实首先要找出最大出现的次数, 即degree. 然后找出哪些元素出现过这么多次. 最后, 搜索这些元素首次出现的下标和最后一次出现的下标, 相减, 取最小值.
@@ -3292,7 +3292,7 @@ var findShortestSubArray = function(nums) {
 
 ---
 ##  Max Area of Island
-![tilte](/images/leetcode/695.png)
+![tilte](leetcode/695.png)
 
 ### 43ms @ 726 test cases, Java
 遍历数组, 每遇到一个1则去递归搜索它相邻的1. 已经搜索过的块被记为0, 不再重复计算.
@@ -3374,7 +3374,7 @@ class Solution {
 ---
 ##  Island Perimeter
 
-![Img title](/images/leetcode/463.png)
+![Img title](leetcode/463.png)
 
 ### Algorithm0: 147ms @ 5833 test cases, Java
 遍历数组是肯定跑不掉的, 每遍历到一个1, 周长加4. 然后看一下上下左右有没有相邻的1, 有则减1. 
@@ -3417,7 +3417,7 @@ class Solution {
 
 ---
 ##  Binary Number with Alternating Bits
-![title](/images/leetcode/693.png)
+![title](leetcode/693.png)
 
 ### 13ms @ 204 test cases , Java
 一开始想到的是用位移去做, 但有没有更好的办法呢?
@@ -3446,7 +3446,7 @@ class Solution {
 
 ---
 ##  Employee Importance
-![tilte](/images/leetcode/690.png)
+![tilte](leetcode/690.png)
 
 ### 30ms @ 108 test case , Java
 最慢的实现, 遍历原始的List用两个hash表存起来, 然后递归搜索
