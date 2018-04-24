@@ -3,7 +3,7 @@
 // }
 
 function FindProxyForURL(url, host) {
-    var DIRECT_LIST = ["baidu", "aliyun", "taobao", "csdn", "zhihu", "163", "ecouser.net", "10.88.", "192.168.", "121.41.72.156", "118.178.152.136", "gov"];
+    var DIRECT_LIST = ["baidu", "aliyun", "taobao", "csdn", "zhihu", "163", "cnblogs", ".cn", "autoimg", "10.88.", "192.168.", "gov"];
 
     for (var i in DIRECT_LIST)  {
         if (shExpMatch(url, "*" + DIRECT_LIST[i] + "*")) {
@@ -16,5 +16,5 @@ function FindProxyForURL(url, host) {
     // should that fail to respond, go directly to the WWW:
     // var ran = Math.random();
     
-    return "SOCKS 192.168.98.141:8888; DIRECT"; 
+    return "SOCKS 127.0.0.1:7777; 127.0.0.1:8888; 127.0.0.1:9999; DIRECT"; 
 }
