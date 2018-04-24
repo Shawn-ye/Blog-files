@@ -15,6 +15,6 @@ function FindProxyForURL(url, host) {
     // All other requests go through port 8080 of proxy.example.com.
     // should that fail to respond, go directly to the WWW:
     // var ran = Math.random();
-    
+    alert(url); 
     return "SOCKS 127.0.0.1:7777;SOCKS 127.0.0.1:8888;SOCKS 127.0.0.1:9999; DIRECT"; 
 }
