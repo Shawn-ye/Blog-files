@@ -1,6 +1,5 @@
 #!/bin/sh
-
-echo 
+clear
 read -p "Enter server address: " svr_addr
 
 echo
@@ -13,6 +12,11 @@ passwd=${passwd:-asdfgh61022}
 
 echo 
 read -p "Enter local socks port: " port
+
+echo
+read -p "Enter number of replicas, leave blank for default 4: " rep
+rep=${rep:-4}
+
 
 
 
