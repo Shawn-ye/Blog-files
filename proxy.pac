@@ -16,5 +16,5 @@ function FindProxyForURL(url, host) {
     // should that fail to respond, go directly to the WWW:
     // var ran = Math.random();
     alert(url); 
-    return "SOCKS 127.0.0.1:9999; DIRECT"; 
+    return "SOCKS 192.168.0.2:9999; DIRECT"; 
 }
