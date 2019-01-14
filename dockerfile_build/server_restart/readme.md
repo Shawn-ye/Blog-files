@@ -2,3 +2,6 @@
 
 * APPKEY: specify a appkey
 
+```
+docker service create --replicas=2 -e SERVER={} -e APPKEY={} shawnye90/server_restart
+```
