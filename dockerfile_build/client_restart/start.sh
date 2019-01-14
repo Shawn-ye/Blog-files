@@ -12,7 +12,7 @@ do
         then
                 curl https://proxyservices.azurewebsites.net/api/RandomPwd?code=$APPKEY > temp
                 returncode=`echo $?`
-                if [[ $returncode == 0]]
+                if [[ $returncode == 0 ]]
                 then
                     temp2=`cat temp`
                     pkill -f sslocal
