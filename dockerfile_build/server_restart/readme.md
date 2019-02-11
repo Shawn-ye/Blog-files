@@ -5,3 +5,7 @@
 ```
 docker service create -p 443:443 --replicas=2 -e APPKEY={} shawnye90/server_restart
 ```
+Extra params:
+```
+--constraint node.role==worker
+```
