@@ -1,7 +1,14 @@
 #!/bin/bash
+
+if [ $PORT ];then
+	echo "PORT = $PORT"
+else
+	PORT=443
+fi
+
 curl https://proxyservices.azurewebsites.net/api/RandomPwd?code=$APPKEY > temp
 temp2=`cat temp`
-ssserver -s 0.0.0.0 -p 443 -k $temp2 &
+ssserver -s 0.0.0.0 -p $PORT -k $temp2 &
 pwdDate=`TZ=UTC-5 date +%m%d`
 
 while true
@@ -17,7 +24,7 @@ do
 		then
 			pkill -f ssserver
 			temp2=`cat temp`
-			ssserver -s 0.0.0.0 -p 443 -k $temp2 &
+			ssserver -s 0.0.0.0 -p $PORT -k $temp2 &
 			pwdDate=`TZ=UTC-5 date +%m%d`
 			echo "Password updated for $pwdDate"
 		else
