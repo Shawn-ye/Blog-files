@@ -7,5 +7,5 @@
 
 
 ```
-docker service create --replicas=4 -p {SOCKS_PORT}:1234 -e SERVER={} -e APPKEY={} shawnye90/ss-rasp
+docker service create --replicas=4 -p {SOCKS_PORT}:1234 -e SERVER={} -e APPKEY={} shawnye90/ssrasp-new
 ```
