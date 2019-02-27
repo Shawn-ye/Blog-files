@@ -1,1 +1,1 @@
-docker build -t shawnye90/ss-rasp .
+docker build -t shawnye90/ssrasp-new .
