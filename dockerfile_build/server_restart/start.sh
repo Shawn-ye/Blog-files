@@ -6,6 +6,11 @@ else
 	PORT=443
 fi
 
+if [[ $host ]]
+then
+	sh stat.sh &
+fi
+
 curl https://proxyservices.azurewebsites.net/api/RandomPwd?code=$APPKEY > temp
 temp2=`cat temp`
 ssserver -s 0.0.0.0 -p $PORT -k $temp2 &
