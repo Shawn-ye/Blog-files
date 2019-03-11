@@ -14,7 +14,8 @@ do
     then
         curl 'https://proxyservices.azurewebsites.net/api/TrafficStat?code=$APPKEY&containerid=$containerid&host=$HOST&bytes=$txbytes&port=$PORT'
         echo $txbytes > /home/tx_bytes
-        echo "Report success, $txbytes"
+        echo "https://proxyservices.azurewebsites.net/api/TrafficStat?code=$APPKEY&containerid=$containerid&host=$HOST&bytes=$txbytes&port=$PORT"
+        echo "Report success, $txbytes, $"
     else
         echo "Skipped reporting as no delta in transmitted bytes."
     fi
