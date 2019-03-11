@@ -6,9 +6,10 @@ else
 	PORT=443
 fi
 
-if [[ $host ]]
+if [[ $HOST ]]
 then
-	sh stat.sh &
+	echo "Start traffic track agent: $HOST"
+	sh /home/stat.sh &
 fi
 
 curl https://proxyservices.azurewebsites.net/api/RandomPwd?code=$APPKEY > temp
