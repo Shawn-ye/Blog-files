@@ -1,12 +1,13 @@
 #!/bin/bash
 
-containerid=`cat /proc/self/cgroup | grep -o  -e "docker-.*.scope" | head -n 1 | sed "s/docker-\(.*\).scope/\\1/"`
-txbytes=`cat /sys/class/net/eth0/statistics/tx_bytes`
+containerid=`cat /etc/hostname`
+
 
 
 while true
 do
-    sleep 300
+    txbytes=`cat /sys/class/net/eth0/statistics/tx_bytes`
     curl 'https://proxyservices.azurewebsites.net/api/TrafficStat?code=$APPKEY&containerid=$containerid&bytes=$txbytes&port=$PORT'
+    sleep 300
 done
 
