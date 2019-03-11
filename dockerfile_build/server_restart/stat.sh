@@ -1,6 +1,7 @@
 #!/bin/bash
 
-containerid=`cat /etc/hostname`
+#containerid=`cat /etc/hostname`
+containerid=`cat /proc/1/cgroup | grep 'docker/' | tail -1 | sed 's/^.*\///' | cut -c 1-12`
 touch /home/tx_bytes
 
 
