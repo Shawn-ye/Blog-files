@@ -12,7 +12,7 @@ do
     txbytes=`cat /sys/class/net/eth0/statistics/tx_bytes`
     if [[ $txbytes != txbytesFromFile ]]
     then
-        curl 'https://proxyservices.azurewebsites.net/api/TrafficStat?code=$APPKEY&containerid=$containerid&host=$HOST&bytes=$txbytes&port=$PORT'
+        curl -S "https://proxyservices.azurewebsites.net/api/TrafficStat?code=$APPKEY&containerid=$containerid&host=$HOST&bytes=$txbytes&port=$PORT"
         echo $txbytes > /home/tx_bytes
         echo "https://proxyservices.azurewebsites.net/api/TrafficStat?code=$APPKEY&containerid=$containerid&host=$HOST&bytes=$txbytes&port=$PORT"
         echo "Report success, $txbytes, $"
