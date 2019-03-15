@@ -1,2 +1,4 @@
+*.img
+
 algorithms/main
 algorithms/temp.cc
